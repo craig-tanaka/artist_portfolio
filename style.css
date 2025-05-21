@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Raleway:wght@100;400&display=swap');
+
+* {
+        box-sizing: border-box;
+}
+
+html {
+        color: white;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 100;
+}
+
+body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        background-color: #F94A29;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+        font-family: 'Nunito';
+        font-weight: 500;
+}
+
+
+/* ------------------------Nav---------------------- */
+nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 4rem;
+}
+
+h1 {
+        margin: 0 2rem;
+}
+
+a {
+        color: white;
+        text-decoration: none;
+}
+
+
+/* ---------------------Main--------------------------------- */
+main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: calc(100vh - 8rem);
+}
+
+.main-content {
+        position: relative;
+
+        box-shadow: 1px 1px 3px 0px black;
+        width: 95%;
+        height: 100%;
+        border-radius: 5px;
+        margin: 0 auto;
+}
+
+.home-page-img {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 5px;
+}
+
+.main-content-text-cont {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+
+        background-color: #f94c29e2;
+        width: 35%;
+        margin-top: 12rem;
+        padding: 0.5rem 1rem;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+}
+
+.main-content-text-cont p {
+        text-align: justify;
+}
+
+
+/* -----------------------Footer-------------------------- */
+footer {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        padding: 1.5rem 2rem 0;
+        height: 4rem;
+}
+
+
+
+/* ---------------------My-Works--------------------------- */
+.img-displayer-cont {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+
+        background-color: rgba(1, 2, 17, 0.805);
+        z-index: 10;
+
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: -webkit-fill-available;
+        display: none;
+}
+
+.img-displayer-cont>button {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        cursor: pointer;
+}
+
+.img-display {
+        position: relative;
+}
+
+.img-display>button {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background-color: #f94a29a6;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+}
+
+.img-displayer-cont > button:hover{
+        color: #f94a29a6;
+        background-color: white;
+}
+
+.img-display .subtext {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background: #f94c29ed;
+        width: 40%;
+        padding: 5px 15px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        display: none;
+}
+
+.img-display .subtext-close {
+        position: absolute;
+        top: 7px;
+        right: 10px;
+        background: white;
+        color: #F94A29;
+        border-radius: 50%;
+        padding: 0;
+        height: 20px;
+        width: 20px;
+}
+.img-display .subtext-close:hover,
+.img-display>button:hover{
+        box-shadow: 1px 1px 3px 0px #740707;
+}
+
+.img-display .subtext-close:active,
+.img-display>button:active,
+.img-displayer-cont > button:active{
+        box-shadow: inset 1px 1px 3px 0px #740707;
+}
+
+.img-display .title {
+        font-size: 1rem;
+        margin-bottom: 0;
+}
+
+.img-display .para {
+        font-size: 0.9rem;
+        text-align: justify;
+}
+
+.img-display img {
+        height: 80vh;
+}
+
+.my-works-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-top: 2rem;
+        margin-left: 20%;
+        margin-right: 15px;
+}
+
+.my-works-header h1 {
+        margin: 0;
+}
+
+.my-works-header>nav {
+        display: block;
+        padding-left: 10px;
+}
+
+.my-works-header .nav-sub-row {
+        display: flex;
+        justify-content: space-between;
+}
+
+
+.main-section--my-works {
+        display: flex;
+        align-content: top;
+        width: 100%;
+}
+
+.my-works-aside {
+        width: 20%;
+        font-size: 0.9em;
+        padding: 0 15px;
+        box-align: border-box;
+}
+
+.my-works-aside hr {
+        margin: 1.5rem 0;
+        opacity: .2;
+}
+
+.my-works-aside hr:first-of-type {
+        margin-top: 0;
+}
+
+.my-works-quote {
+        margin: 0;
+        text-align: justify;
+}
+
+.my-works-socials-header {
+        margin-bottom: 0;
+}
+
+.my-works-social-links {
+        margin-top: 0;
+}
+
+.aside-footer {
+        /* text-align: end; */
+        line-height: 1.2rem;
+        /* font-family: 'Nunito'; */
+        /* font-weight: 400; */
+}
+
+
+
+.my-works-main {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: left;
+        height: 100%;
+        overflow: hidden;
+        padding: 0 10px;
+}
+
+.my-works-work {
+        position: relative;
+        width: 19.9%;
+        height: max-content;
+        margin: 0;
+}
+
+.my-works-work.non-admin {
+        cursor: pointer;
+}
+
+.my-works-work:hover {
+        z-index: 7;
+}
+
+.my-works-work>img {
+        top: 0;
+        width: 100%;
+        cursor: pointer;
+        display: block;
+}
+
+.my-works-work:hover>img {
+        transform-origin: center;
+        transform: scale(1.1);
+        border-radius: 5px;
+        box-sizing: border-box;
+}
+
+.my-works-work-img-after {
+        border-radius: 5px;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        background-color: rgba(5, 17, 48, 0.25);
+}
+
+.my-works-work:hover .my-works-work-img-after {
+        display: block;
+        transform: scale(1.1);
+}
+
+.my-works-work-subtext {
+        display: none;
+        text-shadow: 1px 1px 3px black;
+        pointer-events: none;
+        text-align: justify;
+}
+
+.my-works-work:hover>.my-works-work-subtext {
+        display: initial;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+}
+
+.my-works-work-title {
+        margin-top: 10%;
+        margin-bottom: 0;
+        line-height: 15px;
+}
+.non-admin .my-works-work-title{
+        margin-top: 20%;
+}
+
+.my-works-work-para {
+        font-family: Raleway;
+        font-weight: 400;
+        font-size: 11px;
+        margin: 0.5rem 0;
+}
+
+.my-works-work-para,
+.my-works-work-title {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        word-break: break-word;
+}
+
+
+
+/* -----------------------About-Me-------------------------- */
+.about-me-nav {
+        padding-top: 3rem;
+}
+
+.about-me-main {
+        display: block;
+        background: url('./main-image.png') rgba(4, 20, 53, 0.508);
+        background-size: cover;
+        background-position: bottom;
+        background-blend-mode: multiply;
+}
+
+.about-me-top-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem 0;
+}
+
+.about-me-main-img {
+        width: 15rem;
+        border-radius: 5px;
+}
+
+.about-me-text {
+        text-align: justify;
+        width: 20rem;
+        margin-left: 2rem;
+}
+
+.about-me-quote {
+        text-shadow: 1px 1px 3px black;
+        text-align: center;
+        font-size: 0.9em;
+        font-family: 'Nunito';
+}
+
+
+
+
+/* ------------------------------------------------------ */
+/* -----------------------Admin-------------------------- */
+/* ------------------------------------------------------ */
+.admin-main {
+        display: block;
+        background: url("./img/admin.webp") rgba(6, 35, 62, 0.5);
+        background-blend-mode: multiply;
+        background-size: cover;
+        background-position: center;
+        width: 80%;
+        margin: 0 auto;
+        padding: 5rem;
+        border-radius: 5px;
+        box-shadow: 1px 1px 3px 0px black;
+}
+
+.admin-select-header {
+        text-align: center;
+}
+
+.admin-choice-selection {
+        margin-top: 4rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+}
+
+.admin-choice-selection>a {
+        width: 49%;
+        text-align: center;
+        margin-bottom: 1rem;
+        background-color: red;
+        padding: 2rem 0;
+        border-radius: 5px;
+        cursor: pointer;
+}
+
+.admin-choice-selection>a:hover {
+        box-shadow: 1px 1px 2px 0 black;
+}
+
+.admin-choice-selection>a:active {
+        box-shadow: inset 1px 1px 2px 0 black;
+}
+
+
+/* ----------------------Edit-About-Me-------------------------- */
+.edit.about-me-main {
+        height: max-content;
+}
+
+.about-me-top-content label {
+        display: block;
+}
+
+label[for=about-me-main-img] {
+        text-align: center;
+}
+
+.about-me-main-img.edit {
+        cursor: pointer;
+}
+
+.edit-about-me-main-img-cont {
+        position: relative;
+}
+
+.edit-about-me-main-img-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.256);
+        border-radius: 5px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+        display: none;
+}
+
+.about-me-main-img.edit:hover+.edit-about-me-main-img-overlay {
+        display: flex;
+}
+
+.about-me-main-img.edit:active+.edit-about-me-main-img-overlay {
+        box-shadow: inset 1px 1px 3px 0 black;
+}
+
+label[for=about-me-text] {
+        margin-left: 2rem;
+        text-align: center;
+}
+
+.edit-about-me-quote-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+}
+
+label[for=about-me-quote] {
+        margin-right: 5px;
+}
+
+.edit-about-me-submit-row {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1rem;
+}
+
+/* __________________TextInput-Styling____________ */
+input[type=text],
+textarea,
+select {
+        border: none;
+        border-radius: 10px;
+        background-color: #0806321f;
+        box-shadow: inset 1px 1px 3px 1px rgb(0, 1, 2);
+        color: white;
+        outline: none;
+        font-family: 'Raleway', sans-serif;
+        font-size: 12px;
+        font-weight: 300;
+}
+
+select {
+        padding: 5px;
+        margin-left: 0.5rem;
+}
+
+option {
+        background: #f94c29;
+        color: white;
+}
+
+textarea.about-me-text {
+        padding: 1rem;
+        height: 15rem;
+}
+
+input[name=about-me-quote] {
+        padding: 0.5rem;
+        width: 33rem;
+}
+
+
+/* __________________Button-Styling____________ */
+input[type=submit],
+.edit-post-link,
+.add-new-post,
+button {
+        padding: 0.75rem 1rem;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        background-color: #F94A29;
+        cursor: pointer;
+        font-family: 'Nunito';
+        font-weight: 500;
+}
+
+.edit-post-link,
+.add-new-post {
+        pointer-events: auto;
+        padding: 5px;
+        border-radius: 4px;
+        text-shadow: none;
+        font-size: 12px;
+}
+
+.add-new-post {
+        color: #f94a29;
+        background-color: white;
+}
+
+input[type=submit]:hover,
+.edit-post-link:hover,
+.add-new-post:hover {
+        box-shadow: 1px 1px 3px 0 rgba(3, 21, 62, 0.849);
+}
+
+input[type=submit]:active,
+.edit-post-link:active,
+.add-new-post:active {
+        box-shadow: inset 1px 1px 3px 0 rgba(3, 21, 62, 0.849);
+}
+
+
+/* -----------------------Edit-Home-Page-------------------------- */
+.form-row {
+        display: flex;
+        align-items: center;
+}
+
+.form-row.post-type,
+.form-row.single-post-type {
+        justify-content: center;
+}
+
+.edit-home-form .single-post-type,
+.edit-home-form .post-gallery-image,
+.edit-home-form .post-image,
+.edit-home-form .post-title,
+.edit-home-form .post-title,
+.edit-home-form .post-text,
+.edit-home-form .submit {
+        display: none;
+}
